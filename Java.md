@@ -11,6 +11,7 @@
 - 抽象类不能被实例化,普通类能被实例化
 - 抽象类有抽象方法时,重写该抽象类,必须得去实现它的抽象方法
 
+# hashCode和equals的区别与联系
 
 # Java和C++的区别
 - Java只能单继承,C++可以多继承
@@ -35,9 +36,14 @@
 - StringBuffer线程安全,StringBuilder线程不安全,StringBuilder速度高于StringBuffer
 - String适用于字符串不更改的情况,StringBuilder适用于单线程字符串经常变更,StringBuffer适用于多线程字符串经常变更
 
+# sleep()与wait()的区别
+
 # 深复制和浅复制的区别
 
+# Java gc有哪几种回收算法
+
 # String a = new String("-");产生几个对象？
+- 两个,new String产生在堆里,"-"产生在方法区
 
 # 创建线程有几种方法？
 - 通过实现Runnable
@@ -45,7 +51,13 @@
 - 通过callable和future
 
 # final finally fnizle区别？
+- final适用于修饰不可变的常量
+- finally适用于 try catch
+- finizle使用于对象被销毁时的操作
 
 # 重写和重载的区别
 
+# Java 栈和堆的区别
+- 堆存储的是数组和对象,一般指的是new出来那些变量
+- 栈存储的是引用和数据类型变量
 
