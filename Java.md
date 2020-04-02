@@ -12,6 +12,10 @@
 - 抽象类有抽象方法时,重写该抽象类,必须得去实现它的抽象方法
 
 # hashCode和equals的区别与联系
+- equals用于比较两个对象是否引用于同一个对象,hashCode用于获取对象的哈希值
+- equals相等的情况,hashCode一定相等
+- hashCode相等,equals比较未必相等
+- hashCode效率比equals高
 
 # Java和C++的区别
 - Java只能单继承,C++可以多继承
@@ -37,10 +41,16 @@
 - String适用于字符串不更改的情况,StringBuilder适用于单线程字符串经常变更,StringBuffer适用于多线程字符串经常变更
 
 # sleep()与wait()的区别
-
-# 深复制和浅复制的区别
+- wait方法只能在同步的情况下调用,sleep不必在同步情况下调用
+- wait方法是Object里的方法,sleep是线程里的方法
+- wait方法会释放锁,sleep不释放锁
+- wait唤醒的条件是其他线程调用对象的notify()方法,sleep唤醒条件是超时或者调用interupt()
 
 # Java gc有哪几种回收算法
+- 标记清除法
+- 复制法
+- 标记整理法
+- 分代收集法
 
 # String a = new String("-");产生几个对象？
 - 两个,new String产生在堆里,"-"产生在方法区
@@ -56,6 +66,9 @@
 - finizle使用于对象被销毁时的操作
 
 # 重写和重载的区别
+- 重写发生于父类之中,重载发生同一个类之中
+- 重写必须方法名 参数列表 一样,重载要求方法名一样,参数列表必须不一样
+
 
 # Java 栈和堆的区别
 - 堆存储的是数组和对象,一般指的是new出来那些变量
