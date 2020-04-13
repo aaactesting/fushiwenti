@@ -25,7 +25,14 @@
 ## 程序从编码到执行经历了什么?
 
 ## map和set有什么区别
+- map是以key value形式出现，而set以value形式
+- map不允许修改key,set则不允许修改值
 
 ## new和malloc的区别
+- 内存区域不同，new是在自由存储区进行内存分配，malloc在堆上进行
+- new返回值为它该类类型的本身，malloc返回的是void*
+- new会触发构造函数的回调，malloc不会
+- 当new内存分配失败事，会抛出异常，malloc则返回null
+- new可以被重载，malloc不能被重载
 
 ## C++的stl库
